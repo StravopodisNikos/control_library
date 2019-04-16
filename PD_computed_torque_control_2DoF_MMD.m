@@ -14,8 +14,7 @@ function [doty] = PD_computed_torque_control_2DoF_MMD(M,C,G,torque_dist,Kpd,qd,d
 
 xd = [qd; dqd];
 % Define tracking error
-% error_input = xd - y; % input to controller
-error_input = y; % input to controller
+error_input = xd - y; % input to controller
 
 e = error_input(1:2);
 de = error_input(3:4);
